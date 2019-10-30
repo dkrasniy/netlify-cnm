@@ -7,4 +7,4 @@ featuredimage: /img/20191023-joe-biden-donors-ap-773.jpg
 tags:
   - joe biden
 ---
-Joe Biden surges from 1st to 3rd place in post debate New Hampshire poll
+Joe Biden surges from 1st to 3rd place in post debate New Hampshire poll.
