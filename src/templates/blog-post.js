@@ -1,10 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
-import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import React from "react";
+import PropTypes from "prop-types";
+import { kebabCase } from "lodash";
+import Helmet from "react-helmet";
+import { graphql, Link } from "gatsby";
+import Layout from "../components/Layout";
+import Content, { HTMLContent } from "../components/Content";
+import Img from "gatsby-image"
+
 
 export const BlogPostTemplate = ({
   content,
@@ -13,12 +15,19 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
+  featuredpost,
+  image,
 }) => {
-  const PostContent = contentComponent || Content
+  const PostContent = contentComponent || Content;
 
+  console.log(image.childImageSharp.fixed)
   return (
     <section className="section">
-      {helmet || ''}
+      {helmet || ""}
+      <div className="block w-64">
+
+      <Img fluid={image.childImageSharp.fluid} />
+      </div>
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
@@ -43,49 +52,49 @@ export const BlogPostTemplate = ({
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object,
-}
+  helmet: PropTypes.object
+};
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
+
 
   return (
     <Layout>
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
+        description={post.frontmatter.title}
         helmet={
           <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
+            <title>{`${post.frontmatter.title} - CNM News`}</title>
+            <meta name="description" content={`${post.frontmatter.title}`} />
           </Helmet>
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        featuredpost={post.frontmatter.featuredpost}
+        image={post.frontmatter.featuredimage}
       />
     </Layout>
-  )
-}
+  );
+};
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
-}
+    markdownRemark: PropTypes.object
+  })
+};
 
-export default BlogPost
+export default BlogPost;
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
@@ -95,9 +104,19 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        description
         tags
+        featuredpost
+        featuredimage {
+           childImageSharp {
+            fluid(maxWidth: 1000, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+            fixed(width: 125, height: 125) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
     }
   }
-`
+`;

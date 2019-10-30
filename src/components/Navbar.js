@@ -21,9 +21,9 @@ function NavBar({ siteTitle }) {
   );
 
   return (
-    <header role="banner">
+    <header role="banner" className="shadow">
       <div className="mx-auto container p-4 flex flex-wrap items-center">
-        <Link to="/" className="font-semibold md:pr-8 w-64">
+        <Link to="/" className="font-semibold md:pr-8 w-32">
           <CNMLogo />
         </Link>
         <button
@@ -41,16 +41,14 @@ function NavBar({ siteTitle }) {
           >
             <ul role="menu" className="list-reset md:flex flex-1 items-center">
               <Link role="menuitem" className="p-3 py-2">
-                123
+                Home
+              </Link>
+              <Link role="menuitem" className="p-3 py-2">
+                Latest
               </Link>
             </ul>
           </div>
         </nav>
-        <input
-          className="border rounded ml-auto p-1"
-          type="text"
-          placeholder="Search..."
-        />
       </div>
     </header>
   );
