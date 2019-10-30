@@ -7,7 +7,7 @@ const CNMLogo = ({fill}) => (
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1201.34 442.81"
-      fill={'#cc0000'}
+      fill={fill? fill : '#cc0000'}
     >
       <title>CNM</title>
       <path

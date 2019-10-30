@@ -13,6 +13,7 @@ export const BlogPostTemplate = ({
   contentComponent,
   description,
   tags,
+  date,
   title,
   helmet,
   featuredpost,
@@ -21,18 +22,24 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="section">
+    <section>
+      <div className="bg-red-500 p-12 pb-32">
+        <div className="md:w-3/4 mx-auto">
+          <span className="text-white">{date}</span>
+      <h1 className="text-white text-xl md:text-4xl font-semibold">
+              {title}
+            </h1>
+            </div>
+      </div>
       {helmet || ""}
-      <div className="block w-64">
+      <div className="block w-64 -mt-20 container">
 {image ?  <Img fluid={image && image.childImageSharp && image.childImageSharp.fluid} /> : null}
      
       </div>
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
+            
             <p>{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
@@ -65,7 +72,7 @@ BlogPostTemplate.propTypes = {
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
 
-
+console.log("post", post.frontmatter)
   return (
     <Layout>
       <BlogPostTemplate
@@ -78,6 +85,7 @@ const BlogPost = ({ data }) => {
             <meta name="description" content={`${post.frontmatter.title}`} />
           </Helmet>
         }
+        date={post.frontmatter.date}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         featuredpost={post.frontmatter.featuredpost}
