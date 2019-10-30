@@ -24,8 +24,8 @@ export const BlogPostTemplate = ({
     <section className="section">
       {helmet || ""}
       <div className="block w-64">
-
-      <Img fluid={image.childImageSharp.fluid} />
+{image ?  <Img fluid={image && image.childImageSharp && image.childImageSharp.fluid} /> : null}
+     
       </div>
       <div className="container content">
         <div className="columns">
