@@ -1,98 +1,59 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import React, { useState, useEffect } from "react";
+import { Link } from "gatsby";
+import CNMLogo from "../components/CNMLogo";
 
-const Navbar = class extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      active: false,
-      navBarActiveClass: '',
-    }
+function NavBar({ siteTitle }) {
+  const [menuExpanded, setMenuExpanded] = useState(true);
+
+  function toggleMenu() {
+    menuExpanded ? setMenuExpanded(false) : setMenuExpanded(true);
   }
 
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
-          : this.setState({
-              navBarActiveClass: '',
-            })
-      }
-    )
-  }
+  const HamburgerMenu = (
+    <svg
+      className="fill-current h-6 w-6"
+      viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>Menu</title>
+      <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+    </svg>
+  );
 
-  render() {
-    return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-            </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
+  return (
+    <header role="banner">
+      <div className="mx-auto container p-4 flex flex-wrap items-center">
+        <Link to="/" className="font-semibold md:pr-8 w-64">
+          <CNMLogo />
+        </Link>
+        <button
+          onClick={toggleMenu}
+          className="block md:hidden border border-white ml-auto flex items-center px-3 py-2 rounded"
+        >
+          {HamburgerMenu}
+        </button>
+        <nav role="navigation" className="w-full md:w-auto">
           <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
+            className={
+              `block md:block md:flex md:items-center w-full md:w-auto` +
+              (menuExpanded ? " hidden" : "")
+            }
           >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
+            <ul role="menu" className="list-reset md:flex flex-1 items-center">
+              <Link role="menuitem" className="p-3 py-2">
+                123
               </Link>
-              <Link className="navbar-item" to="/products">
-                Products
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
-            </div>
+            </ul>
           </div>
-        </div>
-      </nav>
-    )
-  }
+        </nav>
+        <input
+          className="border rounded ml-auto p-1"
+          type="text"
+          placeholder="Search..."
+        />
+      </div>
+    </header>
+  );
 }
 
-export default Navbar
+export default NavBar;

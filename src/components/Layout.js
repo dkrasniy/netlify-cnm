@@ -2,7 +2,9 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+
 import './all.sass'
+import '../styles/cnm.css'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
@@ -23,6 +25,12 @@ const TemplateWrapper = ({ children }) => {
         <link
           rel="icon"
           type="image/png"
+          href={`${withPrefix('/')}img/favicon-64x64.png`}
+          sizes="64x64"
+        />
+        <link
+          rel="icon"
+          type="image/png"
           href={`${withPrefix('/')}img/favicon-32x32.png`}
           sizes="32x32"
         />
@@ -32,6 +40,7 @@ const TemplateWrapper = ({ children }) => {
           href={`${withPrefix('/')}img/favicon-16x16.png`}
           sizes="16x16"
         />
+        
 
         <link
           rel="mask-icon"
