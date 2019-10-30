@@ -19,8 +19,8 @@ const IndexPage = ({data}) => {
         {posts &&
           posts.map(({ node: post }, key) => (<>
           
-          <div className={`block post-flex-`+ key} key={post.id}>
-              <div className="shadow mb-4 px-2">
+          <div className={`block post-flex-all post-flex-`+ key} key={post.id}>
+              <div className="shadow my-4 px-2">
             <Link className="font-semibold" to={post.fields.slug}>
                 <div className="img">
                 <PreviewCompatibleImage
