@@ -46,6 +46,10 @@ function NavBar({ siteTitle }) {
               <Link to={'/tags/bernie-sanders/'} role="menuitem" className="p-3 py-2">
                 Bernie Sanders
               </Link>
+              <Link to={'/tags/joe-biden/'} role="menuitem" className="p-3 py-2">
+                Boe Jiden
+              </Link>
+              
               
 
             </ul>
