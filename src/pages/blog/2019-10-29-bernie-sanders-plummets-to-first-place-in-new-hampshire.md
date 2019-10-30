@@ -2,9 +2,8 @@
 templateKey: blog-post
 title: 'Bernie Sanders plummets to first place in New Hampshire. '
 date: 2019-10-30T01:43:12.889Z
-description: 'Bernie Sanders plummets to first place in New Hampshire. '
-featuredpost: false
 featuredimage: /img/10-28-2019-bernie-sanders-2160x1197.jpg
+featuredpost: true
 tags:
   - bernie sanders
 ---
