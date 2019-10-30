@@ -20,7 +20,6 @@ export const BlogPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content;
 
-  console.log(image.childImageSharp.fixed)
   return (
     <section className="section">
       {helmet || ""}
