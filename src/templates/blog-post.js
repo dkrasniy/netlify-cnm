@@ -23,7 +23,7 @@ export const BlogPostTemplate = ({
 
   return (
     <section>
-      <div className="bg-red-500 p-12 pb-32">
+      <div className="bg-red-500 p-12">
         <div className="md:w-3/4 mx-auto">
           <span className="text-white">{date}</span>
       <h1 className="text-white text-xl md:text-4xl font-semibold">
@@ -32,7 +32,7 @@ export const BlogPostTemplate = ({
             </div>
       </div>
       {helmet || ""}
-      <div className="block w-64 -mt-20 container">
+      <div className="block w-64 container">
 {image ?  <Img fluid={image && image.childImageSharp && image.childImageSharp.fluid} /> : null}
      
       </div>

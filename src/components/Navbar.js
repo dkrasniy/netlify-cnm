@@ -43,9 +43,11 @@ function NavBar({ siteTitle }) {
               <Link role="menuitem" className="p-3 py-2">
                 Home
               </Link>
-              <Link role="menuitem" className="p-3 py-2">
-                Latest
+              <Link to={'/tags/bernie-sanders/'} role="menuitem" className="p-3 py-2">
+                Bernie Sanders
               </Link>
+              
+
             </ul>
           </div>
         </nav>

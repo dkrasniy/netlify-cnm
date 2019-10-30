@@ -22,3 +22,12 @@
     clip: auto;
     white-space: normal;
   }
+  .post-flex-all {
+    width:25%;
+  }
+  .post-flex-0 {
+    width:75%;
+  }
+  .post-flex-1 {
+    width:25%;
+  }
