@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Joe Biden surges -9% in new post debate poll
+title: Joe Biden surges down -9% in new post debate poll
 description: ' '
 date: 2019-10-30T16:45:00.000Z
 featuredimage: /img/20191023-joe-biden-donors-ap-773.jpg
