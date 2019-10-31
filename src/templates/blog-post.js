@@ -73,8 +73,6 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
-
-  console.log("post", post.frontmatter);
   return (
     <Layout>
       <BlogPostTemplate
@@ -87,6 +85,10 @@ const BlogPost = ({ data }) => {
             titleTemplate={`%s`}
             meta={[
               {
+                property: 'og:title',
+                content: post.frontmatter.title,
+              },
+              {
                 name: 'description',
                 content: post.frontmatter.title,
               },
@@ -98,7 +100,15 @@ const BlogPost = ({ data }) => {
               {
                 property: 'og:image:url',
                 content:  post.frontmatter.featuredimage.childImageSharp.fixed.src,
-              }]}
+              },
+              {
+                property: 'og:type',
+                content: 'website',
+              },
+              {
+                name: 'twitter:card',
+                content: 'summary',
+              },]}
           />
         }
         date={post.frontmatter.date}
