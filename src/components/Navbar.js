@@ -23,12 +23,12 @@ function NavBar({ siteTitle }) {
 
   return (
     <header role="banner" className="shadow bg-white relative">
-      <div className="mx-auto container p-4 flex justify-between flex-wrap items-center">
-        <Link to="/" className="font-semibold md:pr-8 w-32 order-none">
+      <div className="mx-auto container md:p-4 flex justify-between flex-wrap items-center">
+        <Link to="/" className="font-semibold md:pr-8 w-32 order-none mx-auto md:mx-0 pt-4 md:pt-0">
           <CNMLogo />
         </Link>
         
-        <nav role="navigation" className="w-full md:w-auto order-4 md:order-2">
+        <nav role="navigation" className="w-full md:w-auto order-4 md:order-2 border-t flex text-center mt-4 py-2 md:py-0 md:mt-0 md:text-left md:border-t-0">
           <div  className={`block md:block md:flex md:items-center w-full md:w-auto`}>
             <ul role="menu" className="list-reset md:flex flex-1 items-center">
               <Link role="menuitem" className="p-3 py-2 uppercase text-black font-semibold text-sm tracking-wide">
@@ -47,7 +47,8 @@ function NavBar({ siteTitle }) {
           </div>
         </nav>
         <div className="order-1 md:order-4">
-          <Twitter fill={'red'} />
+           
+          {/* <Twitter fill={'red'} /> */}
         </div>
       </div>
     </header>
