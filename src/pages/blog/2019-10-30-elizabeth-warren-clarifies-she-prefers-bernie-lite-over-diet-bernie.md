@@ -1,6 +1,8 @@
 ---
 templateKey: blog-post
-title: Elizabeth Warren clarifies she prefers "Bernie-Lite" over "Diet Bernie"
+title: >-
+  Elizabeth Warren clarifies she prefers being called "Bernie-Lite" over "Diet
+  Bernie"
 date: 2019-10-31T01:52:21.684Z
 featuredimage: /img/bernie-sanders-polling.jpg
 tags:
