@@ -24,7 +24,7 @@ function NavBar({ siteTitle }) {
   return (
     <header role="banner" className="shadow bg-white relative">
       <div className="mx-auto container md:p-4 flex justify-between flex-wrap items-center">
-        <Link to="/" className="font-semibold md:pr-8 w-32 order-none mx-auto md:mx-0 pt-4 md:pt-0">
+        <Link to="/" className="font-semibold md:pr-8 w-24 md:w-32 order-none mx-auto md:mx-0 pt-4 md:pt-0">
           <CNMLogo />
         </Link>
         
