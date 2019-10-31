@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import CNMLogo from "../components/CNMLogo";
+import {  Twitter } from "react-feather";
 
 function NavBar({ siteTitle }) {
   const [menuExpanded, setMenuExpanded] = useState(true);
@@ -21,32 +22,22 @@ function NavBar({ siteTitle }) {
   );
 
   return (
-    <header role="banner" className="shadow">
-      <div className="mx-auto container p-4 flex flex-wrap items-center">
-        <Link to="/" className="font-semibold md:pr-8 w-32">
+    <header role="banner" className="shadow bg-white relative">
+      <div className="mx-auto container p-4 flex justify-between flex-wrap items-center">
+        <Link to="/" className="font-semibold md:pr-8 w-32 order-none">
           <CNMLogo />
         </Link>
-        <button
-          onClick={toggleMenu}
-          className="block md:hidden border border-white ml-auto flex items-center px-3 py-2 rounded"
-        >
-          {HamburgerMenu}
-        </button>
-        <nav role="navigation" className="w-full md:w-auto">
-          <div
-            className={
-              `block md:block md:flex md:items-center w-full md:w-auto` +
-              (menuExpanded ? " hidden" : "")
-            }
-          >
+        
+        <nav role="navigation" className="w-full md:w-auto order-4 md:order-2">
+          <div  className={`block md:block md:flex md:items-center w-full md:w-auto`}>
             <ul role="menu" className="list-reset md:flex flex-1 items-center">
-              <Link role="menuitem" className="p-3 py-2">
+              <Link role="menuitem" className="p-3 py-2 uppercase text-black font-semibold text-sm tracking-wide">
                 Home
               </Link>
-              <Link to={'/tags/bernie-sanders/'} role="menuitem" className="p-3 py-2">
+              <Link to={'/tags/bernie-sanders/'} role="menuitem" className="p-3 py-2 uppercase text-black font-semibold text-sm tracking-wide">
                 Bernie Sanders
               </Link>
-              <Link to={'/tags/joe-biden/'} role="menuitem" className="p-3 py-2">
+              <Link to={'/tags/joe-biden/'} role="menuitem" className="p-3 py-2 uppercase text-black font-semibold text-sm tracking-wide">
                 Boe Jiden
               </Link>
               
@@ -55,6 +46,9 @@ function NavBar({ siteTitle }) {
             </ul>
           </div>
         </nav>
+        <div className="order-1 md:order-4">
+          <Twitter fill={'red'} />
+        </div>
       </div>
     </header>
   );
