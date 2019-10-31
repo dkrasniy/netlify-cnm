@@ -82,10 +82,24 @@ const BlogPost = ({ data }) => {
         contentComponent={HTMLContent}
         description={post.frontmatter.title}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title} - CNM News`}</title>
-            <meta name="description" content={`${post.frontmatter.title}`} />
-          </Helmet>
+          <Helmet 
+          title={post.frontmatter.title}
+            titleTemplate={`%s`}
+            meta={[
+              {
+                name: 'description',
+                content: post.frontmatter.title,
+              },
+              {
+              
+                property: 'og:image',
+                content: post.frontmatter.featuredimage.childImageSharp.fixed.src,
+              },
+              {
+                property: 'og:image:url',
+                content:  post.frontmatter.featuredimage.childImageSharp.fixed.src,
+              }]}
+          />
         }
         date={post.frontmatter.date}
         tags={post.frontmatter.tags}
@@ -120,8 +134,12 @@ export const pageQuery = graphql`
             fluid(maxWidth: 1000, quality: 100) {
               ...GatsbyImageSharpFluid
             }
-            fixed(width: 125, height: 125) {
-              ...GatsbyImageSharpFixed
+            fixed(width: 1200, height: 630) {
+              width
+              height
+              src
+              srcSet
+              srcWebp
             }
           }
         }
