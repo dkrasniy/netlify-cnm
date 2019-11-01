@@ -48,7 +48,7 @@ function NavBar({ siteTitle }) {
         </nav>
         <div className="order-1 md:order-4">
            
-          {/* <Twitter fill={'red'} /> */}
+         <a href="https://twitter.com/CNMneews" target="_blank"> <Twitter /></a>
         </div>
       </div>
     </header>
