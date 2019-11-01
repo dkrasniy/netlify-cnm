@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: 'What behind the negative downwards surge for Biden? '
+title: 'What behind the downwards surge for Biden? '
 date: 2019-11-01T19:20:23.573Z
 featuredimage: /img/1178725404.jpg.0.jpg
 tags:
