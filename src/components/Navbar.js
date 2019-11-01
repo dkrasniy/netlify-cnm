@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import CNMLogo from "../components/CNMLogo";
 import {  Twitter } from "react-feather";
 
-function NavBar({ siteTitle }) {
+function NavBar() {
   const [menuExpanded, setMenuExpanded] = useState(true);
 
   function toggleMenu() {
@@ -48,7 +48,7 @@ function NavBar({ siteTitle }) {
         </nav>
         <div className="order-1 md:order-4">
            
-         <a href="https://twitter.com/CNMneews" target="_blank"> <Twitter /></a>
+         <a href="https://twitter.com/CNMneews" rel="noopener noreferrer" target="_blank"> <Twitter /></a>
         </div>
       </div>
     </header>

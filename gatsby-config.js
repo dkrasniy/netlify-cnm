@@ -14,6 +14,15 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-151369806-1",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+       
+      },
+    },
+    {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
       options: {
