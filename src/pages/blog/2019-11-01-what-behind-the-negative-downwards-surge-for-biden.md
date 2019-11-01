@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: 'What behind the downwards surge for Biden? '
+title: 'Biden surges to 3rd, up from 1st in Iowa poll'
 date: 2019-11-01T19:20:23.573Z
 featuredimage: /img/1178725404.jpg.0.jpg
 tags:
