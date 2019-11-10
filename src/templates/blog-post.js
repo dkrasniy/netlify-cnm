@@ -130,6 +130,9 @@ const BlogPost = ({ data }) => {
                 content: post.frontmatter.title,
               },
               {
+                property: 'twitter:title',
+                content: post.frontmatter.title,
+              }, {
                 name: 'description',
                 content: post.frontmatter.title,
               },
@@ -138,6 +141,13 @@ const BlogPost = ({ data }) => {
                 property: 'og:image',
                 content: post.frontmatter.featuredimage.childImageSharp.fixed.src,
               },
+              {
+              
+                property: 'twitter:image',
+                content: post.frontmatter.featuredimage.childImageSharp.fixed.src,
+              },
+             
+
               {
                 property: 'og:image:url',
                 content:  post.frontmatter.featuredimage.childImageSharp.fixed.src,
@@ -149,7 +159,12 @@ const BlogPost = ({ data }) => {
               {
                 name: 'twitter:card',
                 content: 'summary',
-              },]}
+              }, {
+                name: 'twitter:creator',
+                content: 'dkrasniy',
+              }
+            
+            ]}
           />
         }
         date={post.frontmatter.date}
