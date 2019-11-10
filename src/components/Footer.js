@@ -14,7 +14,9 @@ const Footer = class extends React.Component {
         <div className="w-32 block mx-auto">
         <CNMLogo fill={'#999'}/>
         </div>
-        <i className="text-gray-700">Finest Breaking Political News</i>
+        <i className="text-gray-500 block pt-2">Finest Political News</i>
+        <a href="https://twitter.com/dkrasniy" target="_blank" className="hover:text-gray-100 text-gray-700 block text-sm">Built with &hearts; in California</a>
+
       </footer>
     )
   }

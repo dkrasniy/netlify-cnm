@@ -2,15 +2,39 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import Img from "gatsby-image";
 
 class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
     const postLinks = posts.map(post => (
-      <li key={post.node.fields.slug}>
-        <Link to={post.node.fields.slug}>
-          <h2 className="is-size-2">{post.node.frontmatter.title}</h2>
-        </Link>
+          <li className={`block w-full md:w-1/2`} key={post.node.id}>
+        <div className="my-2 md:px-2">
+          <div className="shadow bg-white">
+            <Link className="flex flex-wrap" to={post.node.fields.slug}>
+              <div className="img w-1/3">
+                {post.node.frontmatter.featuredimage ? (
+                  <Img
+                    style={{ height: "160px" }}
+                    alt={`featured image thumbnail for post ${post.node.title}`}
+                    fluid={
+                      post.node.frontmatter.featuredimage.childImageSharp
+                        .fluid
+                    }
+                  />
+                ) : null}
+              </div>
+              <div className="w-2/3 p-6 flex flex-col justify-center ">
+                <span className="text-gray-900 block font-semibold">
+                  {post.node.frontmatter.title}
+                </span>
+                <span className="text-sm text-gray-500 block">
+                  {post.node.frontmatter.date}
+                </span>
+              </div>
+            </Link>
+          </div>
+        </div>
       </li>
     ))
     const tag = this.props.pageContext.tag
@@ -24,14 +48,14 @@ class TagRoute extends React.Component {
       <Layout>
         <section className="section">
           <Helmet title={`${tag} | ${title}`} />
-          <div className="container content">
+          <div className="container mx-auto py-8 md:px-4 px-6">
             <div className="columns">
               <div
                 className="column is-10 is-offset-1"
                 style={{ marginBottom: '6rem' }}
               >
-                <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
-                <ul className="taglist">{postLinks}</ul>
+                <h3 className="leading-tight  text-2xl md:text-4xl font-semibold">{tagHeader}</h3>
+                <ul className="taglist flex flex flex-wrap ">{postLinks}</ul>
                 <p>
                   <Link to="/tags/">Browse all tags</Link>
                 </p>
@@ -66,6 +90,14 @@ export const tagPageQuery = graphql`
           }
           frontmatter {
             title
+            date(formatString: "MMMM DD, YYYY")
+            featuredimage {
+              childImageSharp {
+                fluid(maxWidth: 120, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

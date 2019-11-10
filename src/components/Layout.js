@@ -8,7 +8,7 @@ import "../styles/cnm.css";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ children,location }) => {
   const { title, description } = useSiteMetadata();
   return (
     <div className="bg-gray-100">

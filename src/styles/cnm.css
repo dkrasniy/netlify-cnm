@@ -31,3 +31,9 @@
   .post-flex-1 {
     width:25%;
   }
+  @media(max-width:767px){
+    
+  .container-md-up {
+    max-width: 100%!important;
+}
+  }
