@@ -34,16 +34,16 @@ function NavBar() {
         <nav role="navigation" className="bg-gray-200 md:bg-red-500 w-full md:w-auto order-4 md:order-2 flex text-center mt-4 py-2 md:py-0 md:mt-0 md:text-left ">
           <div  className={`block md:block md:flex md:items-center w-full md:w-auto`}>
             <ul role="menu" className="list-reset md:flex flex-1 items-center">
-              <Link role="menuitem" className="p-3 py-2 uppercase text-black md:text-white font-semibold hover:text-gray-200 text-sm tracking-wide">
+              <Link role="menuitem" className="p-3 py-2 uppercase text-black md:text-white font-semibold md:hover:text-gray-200 text-sm tracking-wide">
                 Home
               </Link>
-              <Link to={'/tags/bernie-sanders/'} role="menuitem" className="p-3 py-2 uppercase text-black hover:text-gray-200 md:text-white font-semibold text-sm tracking-wide">
+              <Link to={'/tags/bernie-sanders/'} role="menuitem" className="p-3 py-2 uppercase text-black md:hover:text-gray-200 md:text-white font-semibold text-sm tracking-wide">
                 Bernie Sanders
               </Link>
-              <Link to={'/tags/mayor-pete/'} role="menuitem" className="p-3 py-2 uppercase text-black hover:text-gray-200 md:text-white font-semibold text-sm tracking-wide">
+              <Link to={'/tags/mayor-pete/'} role="menuitem" className="hidden md:flex p-3 py-2 uppercase text-black md:hover:text-gray-200 md:text-white font-semibold text-sm tracking-wide">
                 Mayor Pete
               </Link>
-              <Link to={'/tags/joe-biden/'} role="menuitem" className="p-3 py-2 uppercase text-black hover:text-gray-200 md:text-white font-semibold text-sm tracking-wide">
+              <Link to={'/tags/joe-biden/'} role="menuitem" className="p-3 py-2 uppercase text-black md:hover:text-gray-200 md:text-white font-semibold text-sm tracking-wide">
                 Boe Jiden
               </Link>
             
