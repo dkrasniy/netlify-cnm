@@ -114,6 +114,7 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
+  console.log("BLOGPOST", post.frontmatter.featuredimage.childImageSharp.fixed.src)
   return (
     <Layout>
       <BlogPostTemplate
@@ -132,7 +133,18 @@ const BlogPost = ({ data }) => {
               {
                 property: 'twitter:title',
                 content: post.frontmatter.title,
-              }, {
+              },
+              {
+                property: 'twitter:description',
+                content: post.frontmatter.title,
+              }, 
+              {
+                property: 'twitter:card',
+                content: 'summary_large_image'
+              }, 
+             
+   
+                {
                 name: 'description',
                 content: post.frontmatter.title,
               },
