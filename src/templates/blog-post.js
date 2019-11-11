@@ -137,13 +137,8 @@ const BlogPost = ({ data }) => {
               {
                 property: 'twitter:description',
                 content: post.frontmatter.title,
-              }, 
-              {
-                property: 'twitter:card',
-                content: 'summary_large_image'
-              }, 
-             
-   
+              },
+              
                 {
                 name: 'description',
                 content: post.frontmatter.title,
@@ -170,7 +165,7 @@ const BlogPost = ({ data }) => {
               },
               {
                 name: 'twitter:card',
-                content: 'summary',
+                content: 'summary_large_image',
               }, {
                 name: 'twitter:creator',
                 content: 'dkrasniy',
