@@ -139,18 +139,18 @@ const BlogPost = ({ data }) => {
               {
               
                 property: 'og:image',
-                content: post.frontmatter.featuredimage.childImageSharp.fixed.src,
+                content:('https://cnmnews.org' + post.frontmatter.featuredimage.childImageSharp.fixed.src),
               },
               {
               
                 property: 'twitter:image',
-                content: post.frontmatter.featuredimage.childImageSharp.fixed.src,
+                content: ('https://cnmnews.org' + post.frontmatter.featuredimage.childImageSharp.fixed.src),
               },
              
 
               {
                 property: 'og:image:url',
-                content:  post.frontmatter.featuredimage.childImageSharp.fixed.src,
+                content:  ('https://cnmnews.org' + post.frontmatter.featuredimage.childImageSharp.fixed.src),
               },
               {
                 property: 'og:type',
