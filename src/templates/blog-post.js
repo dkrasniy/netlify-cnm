@@ -134,10 +134,7 @@ const BlogPost = ({ data }) => {
                 property: 'twitter:title',
                 content: post.frontmatter.title,
               },
-              {
-                property: 'twitter:description',
-                content: post.frontmatter.title,
-              },
+            
               
                 {
                 name: 'description',
