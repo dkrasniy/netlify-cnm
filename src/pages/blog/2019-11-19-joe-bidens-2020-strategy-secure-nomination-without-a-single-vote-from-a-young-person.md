@@ -11,4 +11,4 @@ featuredimage: /img/images.jpg
 ---
 "The truth of the matter is, there's not nearly been enough evidence that has been acquired as to whether or not it is a gateway drug," Biden said. "It's a debate, and I want a lot more before I legalize it nationally. I want to make sure we know a lot more about the science behind it."
 
-The 1990's called. They want their talking points back.
+Sigh... Ok Boomer, the 1990's called and they want their talking points back.
