@@ -7,6 +7,6 @@ description: >-
 date: 2019-11-19T04:36:47.423Z
 featuredimage: /img/bernie-sweater.png
 tags:
-  - Bernie Sanders
+  - bernie sanders
 ---
 The "Socialist" Senator Was Seen Wearing A Luxurious Sweater.
