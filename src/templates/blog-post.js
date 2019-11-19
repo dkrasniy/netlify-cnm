@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { kebabCase } from "lodash";
 import Helmet from "react-helmet";
-import { graphql, Link } from "gatsby";
+import { Link, graphql } from 'gatsby';
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import Img from "gatsby-image";
@@ -99,8 +99,13 @@ const FacebookIconBS = (<svg aria-hidden="true" focusable="false" data-prefix="f
             </ul>
           </div>
         ) : null}
+<div className="text-center py-6">
+<Link className=" p-2 px-4 bg-white shadow rounded mx-auto inline-block text-center" to={'/'}>Load more stories...</Link>
+</div>
+
       </div>
     </article>
+    
   );
 };
 
@@ -134,6 +139,11 @@ const BlogPost = ({ data }) => {
                 property: 'twitter:title',
                 content: post.frontmatter.title,
               },
+              {
+
+              property: 'twitter:description',
+              content: post.frontmatter.description,
+            },
             
               
                 {
@@ -175,6 +185,7 @@ const BlogPost = ({ data }) => {
         slug={post.fields.slug}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        description={post.frontmatter.description}
         featuredpost={post.frontmatter.featuredpost}
         image={post.frontmatter.featuredimage}
       />
@@ -192,6 +203,7 @@ export default BlogPost;
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
+    
     markdownRemark(id: { eq: $id }) {
       id
       html
@@ -202,6 +214,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         tags
+        description
         featuredpost
         featuredimage {
           childImageSharp {
