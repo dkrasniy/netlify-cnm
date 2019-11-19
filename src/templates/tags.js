@@ -5,6 +5,7 @@ import Layout from '../components/Layout'
 import Img from "gatsby-image";
 
 class TagRoute extends React.Component {
+
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
     const postLinks = posts.map(post => (

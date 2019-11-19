@@ -52,6 +52,12 @@ exports.createPages = ({ actions, graphql }) => {
     posts.forEach(edge => {
       if (_.get(edge, `node.frontmatter.tags`)) {
         tags = tags.concat(edge.node.frontmatter.tags)
+        var sorted = [];
+        for (var i = 0; i < tags.length; i++) {
+            sorted.push(tags[i].toLowerCase());
+        }
+        tags = sorted.sort();
+
       }
     })
     // Eliminate duplicate tags
@@ -59,6 +65,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     // Make tag pages
     tags.forEach(tag => {
+      tag = tag.toLowerCase();
       const tagPath = `/tags/${_.kebabCase(tag)}/`
 
       createPage({
