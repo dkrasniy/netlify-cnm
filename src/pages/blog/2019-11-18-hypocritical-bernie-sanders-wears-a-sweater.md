@@ -9,4 +9,4 @@ featuredimage: /img/bernie-sweater.png
 tags:
   - Bernie Sanders
 ---
-The "Socialist" Senator Was Seen Wearing A Luxurious sweater.
+The "Socialist" Senator Was Seen Wearing A Luxurious Sweater.
