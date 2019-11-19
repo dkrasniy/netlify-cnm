@@ -6,5 +6,7 @@ description: >-
   is cancelled! 
 date: 2019-11-19T04:36:47.423Z
 featuredimage: /img/bernie-sweater.png
+tags:
+  - Bernie Sanders
 ---
 The "Socialist" Senator Was Seen Wearing A Luxurious sweater.
