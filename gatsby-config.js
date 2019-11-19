@@ -1,10 +1,13 @@
 module.exports = {
   siteMetadata: {
     title: 'CNM',
+    siteUrl: `https://cnmnews.org/`,
     description:
       'Finest Political News',
   },
+
   plugins: [
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
