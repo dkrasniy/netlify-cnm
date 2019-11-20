@@ -165,11 +165,7 @@ const BlogPostTemplate = ({
 
 
       <div className="text-center py-6">
-      <button className=" p-2 px-4 bg-white shadow rounded mx-auto inline-block text-center"  type="button" onClick={()=> window.gtag("event", "click", {
-  'action': 'Click',
-  'event_category': 'Read More Button',
-  'value': slug
-},   navigate("/"))}>Read More Stories</button>
+      <button className=" p-2 px-4 bg-white shadow rounded mx-auto inline-block text-center"  type="button" onClick={()=>  navigate("/")}>Read More Stories</button>
 </div>
 
      
