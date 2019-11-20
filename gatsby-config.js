@@ -9,13 +9,20 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sitemap`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: "UA-151369806-1",
-        head: true,
-       
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "UA-151369806-1"],      
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: false,
+        },
       },
     },
+    
+   
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
