@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: 'Joe Biden releases kids hear words "Record Players For All" plan '
+title: 'Joe Biden releases "Record Players For All" plan '
 description: >-
   Joe Biden has released his long anticipated landmark "Record Players For All"
   policy to ensure all kids hear words.
