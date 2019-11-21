@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Bernie free falls into first place in new Emerson poll
+title: 'Bernie free falls into first place, Klobuchar surges to 1% '
 description: >-
   The Bernie campaign free falls into first place as Klobuchar surges to 1% in a
   new Emerson poll. 
