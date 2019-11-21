@@ -1,10 +1,10 @@
 ---
 templateKey: blog-post
-title: 'Buttigieg Big Winner Of Tonight’s Debate. Bernie Struggles. '
+title: Bernie Already Biggest Loser of Our Pre-Debate Show
 date: 2019-11-21T01:31:10.300Z
-featuredimage: /img/da908ee5-e9a9-4536-8dff-0f9cd79dec3b.jpeg
+featuredimage: /img/31641c84-1cbb-48a4-99b2-286ef5e801d9.jpeg
 tags:
   - mayor pete
   - bernie sanders
 ---
-The debate hasn’t happened yet? Who cares. We don’t report the news. We MAKE the news!
+The debate hasn’t happened yet? Who cares. Bernie is terrible according to our experts!
