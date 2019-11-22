@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: “Bad Dude” Corn Pop Found Dead at Age 74
+title: 'Biden Adversary, Corn Pop, Found Dead at Age 74'
 date: 2019-11-22T21:43:55.772Z
 featuredimage: /img/ab696d94-2f2b-4d6b-8cb9-9b5774101bfd.jpeg
 tags:
