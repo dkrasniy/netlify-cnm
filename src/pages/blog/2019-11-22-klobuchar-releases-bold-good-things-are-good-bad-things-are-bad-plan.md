@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: 'Klobuchar releases bold "Good things are good, bad things are bad" plan'
+title: 'Klobuchar releases "Good things are good, bad things are bad" plan'
 description: >-
   She is fully committed to fighting against bad things and fighting for good
   things! She has made it clear that she believes bad things are bad, and good
