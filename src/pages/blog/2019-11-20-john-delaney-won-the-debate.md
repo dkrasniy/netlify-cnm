@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: John Delaney Won The Debate
 date: 2019-11-21T04:52:32.518Z
+author: Berniewouldawon
 featuredimage: /img/f4f74966-b9a2-456a-a9a6-df3f64ef00a8.jpeg
 tags:
   - john delaney

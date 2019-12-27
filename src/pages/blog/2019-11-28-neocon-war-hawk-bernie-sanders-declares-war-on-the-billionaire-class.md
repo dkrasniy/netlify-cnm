@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: Neocon War Hawk Bernie Sanders Declares War on the Billionaire Class
 date: 2019-11-29T03:28:42.454Z
+author: Berniewouldawon
 featuredimage: /img/53e6ef9c-ceb7-4706-93b9-605710979766.jpeg
 tags:
   - bernie sanders

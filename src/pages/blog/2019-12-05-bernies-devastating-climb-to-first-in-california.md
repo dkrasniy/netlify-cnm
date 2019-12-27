@@ -5,6 +5,7 @@ description: >-
   Recent poll shows Bernie's devastating climb into first place in California.
   Warren surges to 2nd! 
 date: 2019-12-05T20:59:12.184Z
+author: dkrasniy
 featuredimage: >-
   /img/2019-08-07t033124z-1896214523-rc152939cb00-rtrmadp-3-usa-election-sanders.jpg
 tags:

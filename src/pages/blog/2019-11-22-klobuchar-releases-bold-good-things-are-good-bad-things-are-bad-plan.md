@@ -6,6 +6,7 @@ description: >-
   things! She has made it clear that she believes bad things are bad, and good
   things are good.
 date: 2019-11-23T05:55:15.957Z
+author: dkrasniy
 featuredimage: /img/sdf.png
 tags:
   - amy klobuchar

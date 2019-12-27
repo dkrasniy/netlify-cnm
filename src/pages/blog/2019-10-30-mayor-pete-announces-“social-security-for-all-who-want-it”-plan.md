@@ -5,6 +5,7 @@ description: >-
   In a major victory for freedom and choice, Mayor Pete announces “Social
   Security for All Who Want It” plan.
 date: 2019-10-31T00:52:03.300Z
+author: dkrasniy
 featuredimage: /img/pb.jpg
 ---
 In a major victory for freedom and choice, Mayor Pete announces “Social Security for All Who Want It” plan.

@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: 'Bernie sinks to 1st place in new poll. Time to drop out? '
 date: 2019-11-15T20:01:35.403Z
+author: dkrasniy
 featuredimage: /img/download.jpeg
 tags:
   - bernie sanders

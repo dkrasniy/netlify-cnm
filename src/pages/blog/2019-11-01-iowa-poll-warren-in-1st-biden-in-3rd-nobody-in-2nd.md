@@ -3,6 +3,7 @@ templateKey: blog-post
 title: 'IOWA POLL: Warren in 1st, Biden in 3rd, Nobody in 2nd'
 description: ''
 date: 2019-11-02T01:52:21.684Z
+author: dkrasniy
 featuredimage: /img/eis3qltw4ae274p.jpg
 tags:
   - bernie sanders

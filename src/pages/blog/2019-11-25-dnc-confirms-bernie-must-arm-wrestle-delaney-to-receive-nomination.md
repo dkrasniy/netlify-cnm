@@ -5,6 +5,7 @@ description: >-
   The DNC has released a statement confirming Bernie must indeed defeat Delaney
   in an arm wrestle to receive the Democratic nomination. 
 date: 2019-11-26T01:06:03.688Z
+author: dkrasniy
 featuredimage: /img/delanrybernie.jpg
 tags:
   - bernie sanders

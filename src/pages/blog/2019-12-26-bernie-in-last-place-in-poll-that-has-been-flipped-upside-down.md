@@ -5,6 +5,7 @@ description: >-
   Bernie must either drop out or poll in first place in both the upside down and
   upright polls!
 date: 2019-12-27T01:17:40.466Z
+author: dkrasniy
 featuredimage: /img/upsidedown.png
 tags:
   - bernie sanders

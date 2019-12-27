@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: Bernie Won Every Argument But Still Lost The Debate
 date: 2019-11-21T04:32:53.041Z
+author: Berniewouldawon
 featuredimage: /img/48c71f40-31fc-4843-bd7b-7f0652caf474.jpeg
 tags:
   - bernie sanders

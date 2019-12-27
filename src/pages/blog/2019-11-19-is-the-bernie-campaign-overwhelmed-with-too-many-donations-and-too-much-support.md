@@ -4,6 +4,7 @@ title: >-
   Is the Bernie campaign overwhelmed with too many donations and too much
   support?
 date: 2019-11-19T20:09:22.091Z
+author: dkrasniy
 featuredimage: /img/ejvsytgwkaatrpc.jpg
 tags:
   - bernie sanders

@@ -5,6 +5,7 @@ description: >-
   Bernie Sanders often speaks out against air pollution, yet the other day was
   caught clearly breathing air.  
 date: 2019-12-27T01:29:31.841Z
+author: dkrasniy
 featuredimage: /img/gettyimages-1166098411-e1565453280570.jpg
 tags:
   - bernie sanders

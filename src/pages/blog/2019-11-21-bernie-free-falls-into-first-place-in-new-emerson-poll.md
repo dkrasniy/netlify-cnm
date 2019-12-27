@@ -5,6 +5,7 @@ description: >-
   The Bernie campaign free falls into first place as Klobuchar surges to 1% in a
   new Emerson poll. 
 date: 2019-11-21T17:19:22.919Z
+author: dkrasniy
 featuredimage: /img/ej6xtqjwsaefc5w.png
 tags:
   - klobuchar

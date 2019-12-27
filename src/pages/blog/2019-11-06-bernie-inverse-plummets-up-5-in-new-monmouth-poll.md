@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: Bernie inverse plummets up 5% in new Monmouth Poll
 date: 2019-11-06T17:02:02.932Z
+author: dkrasniy
 featuredimage: /img/screen-shot-2019-11-06-at-9.16.00-am.png
 tags:
   - bernie sanders

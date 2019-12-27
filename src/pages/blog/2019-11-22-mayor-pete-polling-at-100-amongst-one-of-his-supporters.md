@@ -5,6 +5,7 @@ description: >-
   A new national Emerson poll (Sample size: 1) shows Mayor Pete surging to 100%
   in a poll amongst one of his supporters. 
 date: 2019-11-23T05:22:13.214Z
+author: dkrasniy
 featuredimage: /img/mpete.png
 tags:
   - mayor pete

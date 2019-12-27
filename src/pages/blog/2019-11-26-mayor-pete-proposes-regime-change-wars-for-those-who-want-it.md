@@ -6,6 +6,7 @@ description: >-
   military to invade and overthrow their government" Mayor Pete said Tuesday
   night. 
 date: 2019-11-27T03:34:57.739Z
+author: dkrasniy
 featuredimage: /img/rcw.jpg
 tags:
   - mayor pete
