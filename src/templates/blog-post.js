@@ -78,12 +78,23 @@ const BlogPostTemplate = ({
   title,
   slug,
   helmet,
-  featuredpost,
+  author,
   image
 }) => {
   const PostContent = contentComponent || Content;
   const siteurl = "https://cnmnews.org";
   
+  let authorLabel = null;
+  switch(author) {
+    case 'dkrasniy':
+      authorLabel = 'David Krasniy'
+    break;
+    case 'Berniewouldawon':
+      authorLabel = 'Michael'
+    break;
+  default:
+    authorLabel = 'CNM'
+  }
   return (
     <article itemScope itemType="http://schema.org/Article">
       <div className="bg-white p-6 py-8 md:p-12 pb-32 md:pb-40">
@@ -93,17 +104,21 @@ const BlogPostTemplate = ({
               itemProp="name headline"
               className="leading-tight text-gray-900 text-2xl md:text-4xl font-semibold"
             >
-              {title}
+              {title} 
             </h1>
             <div className="py-2  flex items-center justify-between ">
-              <div>
+              <div className="flex items-center my-4 md:mb-0">
+              <a className="font-semibold" href={`https://twitter.com/${author}`} title={`Twitter account for ${authorLabel}`} target="_blank"><img className="w-10 rounded-full mr-3" src={`https://avatars.io/twitter/${author}/medium`} alt={`Twitter profile image for ${authorLabel}`}/></a>
+                <div>
+                  <p>by <a className="font-semibold" href={`https://twitter.com/${author}`} title={`Twitter account for ${authorLabel}`} target="_blank">{authorLabel}</a></p>
                 <time
                   itemProp="datePublished"
-                  className="text-gray-800 italic text-sm"
+                  className="text-gray-700 text-sm"
                 >
-                  <span className="text-gray-500">Published on</span>{" "}
+                  <span>Published on</span>{" "}
                   <span>{date}</span>
                 </time>
+                </div>
               </div>
               <div className="flex">
                 {" "}
@@ -121,15 +136,7 @@ const BlogPostTemplate = ({
                 >
                   {TwitterIconBS}
                 </TwitterShareButton>
-                <EmailShareButton
-                  className="rounded-full bg-gray-200 p-2"
-                  subject={title}
-                  url={siteurl + slug}
-                  openWindow={true}
-                  body={"Check out this article: "}
-                >
-                  {EmailIconsBS}
-                </EmailShareButton>
+              
               </div>
             </div>
           </div>
@@ -190,6 +197,7 @@ const BlogPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.title}
+        author={post.frontmatter.author}
         helmet={
           <Helmet
             title={post.frontmatter.title}
@@ -251,7 +259,6 @@ const BlogPost = ({ data }) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         description={post.frontmatter.description}
-        featuredpost={post.frontmatter.featuredpost}
         image={post.frontmatter.featuredimage}
       />
     </Layout>
@@ -278,8 +285,8 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         tags
+        author
         description
-        featuredpost
         featuredimage {
           childImageSharp {
             fluid(maxWidth: 1000, quality: 100) {
