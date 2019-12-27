@@ -22,6 +22,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "text", required: false}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Author", name: "author", widget: "select", options: [{ label: "Michael", value: "Berniewouldawon" }, { label: "David", value: "dkrasniy" }]}
       - {label: "Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown", required: false}   
       - {label: "Tags", name: "tags", widget: "list", required: false}
