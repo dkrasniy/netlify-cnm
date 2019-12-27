@@ -110,7 +110,7 @@ const BlogPostTemplate = ({
               <div className="flex items-center my-4 md:mb-0">
               <a className="font-semibold" href={`https://twitter.com/${author}`} title={`Twitter account for ${authorLabel}`} target="_blank"><img className="w-10 rounded-full mr-3" src={`https://avatars.io/twitter/${author}/medium`} alt={`Twitter profile image for ${authorLabel}`}/></a>
                 <div>
-                  <p>by <a className="font-semibold" href={`https://twitter.com/${author}`} title={`Twitter account for ${authorLabel}`} target="_blank">{authorLabel}</a></p>
+                  <p>by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a className="font-semibold" href={`https://twitter.com/${author}`} itemprop="url" title={`Twitter account for ${authorLabel}`} target="_blank"><span itemprop="name">{authorLabel}</span></a></span></p>
                 <time
                   itemProp="datePublished"
                   className="text-gray-700 text-sm"
