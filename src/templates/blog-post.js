@@ -6,7 +6,7 @@ import { Link, graphql,navigate } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import Img from "gatsby-image";
-
+import BlogRoll from "../components/BlogRoll";
 
 import {
   FacebookShareButton,
@@ -71,6 +71,7 @@ const EmailIconsBS = (
 
 const BlogPostTemplate = ({
   content,
+  id,
   contentComponent,
   description,
   tags,
@@ -79,7 +80,8 @@ const BlogPostTemplate = ({
   slug,
   helmet,
   author,
-  image
+  image,
+  allposts
 }) => {
   const PostContent = contentComponent || Content;
   const siteurl = "https://cnmnews.org";
@@ -113,31 +115,14 @@ const BlogPostTemplate = ({
                   <p>by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><a className="font-semibold" href={`https://twitter.com/${author}`} itemprop="url" title={`Twitter account for ${authorLabel}`} target="_blank"><span itemprop="name">{authorLabel}</span></a></span></p>
                 <time
                   itemProp="datePublished"
-                  className="text-gray-700 text-sm"
+                  className="text-gray-700 text-xs md:text-sm"
                 >
                   <span>Published on</span>{" "}
                   <span>{date}</span>
                 </time>
                 </div>
               </div>
-              <div className="flex">
-                {" "}
-                <FacebookShareButton
-                  className="rounded-full bg-gray-200 p-2 mr-2"
-                  url={siteurl + slug}
-                  quote={title}
-                >
-                  {FacebookIconBS}
-                </FacebookShareButton>
-                <TwitterShareButton
-                  className="rounded-full bg-gray-200 p-2 mr-2"
-                  url={siteurl + slug}
-                  title={title}
-                >
-                  {TwitterIconBS}
-                </TwitterShareButton>
-              
-              </div>
+             
             </div>
           </div>
         </div>
@@ -157,7 +142,7 @@ const BlogPostTemplate = ({
       <div className="max-w-3xl leading-relaxed mx-auto py-4 p-6 md:px-0">
         <PostContent content={content} />
         {tags && tags.length ? (
-          <div style={{ marginTop: `4rem` }}>
+          <div style={{ marginTop: `2rem` }}>
             <h4>Tags</h4>
             <ul className="taglist" style={{'listStyle':'none'}}>
               {tags.map(tag => (
@@ -168,12 +153,83 @@ const BlogPostTemplate = ({
             </ul>
           </div>
         ) : null}
+
+        
+        
       </div>
+      <div className="max-w-3xl mx-auto bg-white p-6 py-1 my-4 block container mx-auto">
+      <div className=" my-8">
+<span className="block font-semibold text-center text-lg pb-2">Share this story</span>
+<div className="flex text-center justify-center">
+<TwitterShareButton
 
-
-      <div className="text-center py-6">
-      <button className=" p-2 px-4 bg-white shadow rounded mx-auto inline-block text-center"  type="button" onClick={()=>  navigate("/")}>Read More Stories</button>
+style={{'background':'#1DA1F2'}}
+  className="rounded-full text-sm text-white outline-none focus:outline-none p-2 px-4 mr-2 flex items-center"
+  url={siteurl + slug}
+  title={title}
+>{TwitterIconBS}<span className="ml-2">Share to Twitter</span>
+</TwitterShareButton>
+<FacebookShareButton
+   style={{'background':'#4267B2'}}
+  className="rounded-full text-sm text-white outline-none focus:outline-none p-2 px-4 mr-2 flex items-center"
+  url={siteurl + slug}
+  quote={title}
+>{FacebookIconBS}<span className="ml-2">Share to Facebook</span>
+</FacebookShareButton>
 </div>
+
+
+
+</div>
+      </div>
+<div className="container mx-auto max-w-3xl">
+<span className="block font-semibold text-center text-lg pb-2">Recent Stories</span>
+
+      <div className="flex flex-wrap">
+ 
+        {allposts &&
+          allposts.slice(0).map(({ node: post }, key) => {
+            if(post.id !== id) {
+              return (
+                <>
+                  <div className={`block w-full md:w-1/2`} key={post.id}>
+                    <div className="my-2 md:px-2">
+                      <div className="bg-white">
+                        <Link className="flex flex-wrap" to={post.fields.slug + `?section=recent&originid=${id}&originslug=${slug}`}>
+                          <div className="img w-1/3 md:w-full">
+                            {post.frontmatter.featuredimage ? (
+                              <Img
+                                style={{ height: "160px" }}
+                                alt={`featured image thumbnail for post ${post.title}`}
+                                fluid={
+                                  post.frontmatter.featuredimage.childImageSharp
+                                    .fluid
+                                }
+                              />
+                            ) : null}
+                          </div>
+                          <div className="w-2/3 md:w-full p-6 flex flex-col justify-center md:flex-none">
+                            <span className="text-gray-900 block font-semibold">
+                              {post.frontmatter.title}
+                            </span>
+                            <span className="text-sm text-gray-500 block">
+                              {post.frontmatter.date}
+                            </span>
+                          </div>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </>)
+            }
+            else return null
+           
+})}
+      </div>
+      </div>
+      {/* <div className="text-center py-6">
+      <button className=" p-2 px-4 bg-white shadow rounded mx-auto inline-block text-center"  type="button" onClick={()=>  navigate("/")}>Read More Stories</button>
+</div> */}
 
      
  
@@ -191,13 +247,17 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
+  const { edges: posts } = data.allMarkdownRemark;
+  
   return (
     <Layout>
       <BlogPostTemplate
+      id={post.id}
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.title}
         author={post.frontmatter.author}
+        allposts={posts}
         helmet={
           <Helmet
             title={post.frontmatter.title}
@@ -298,6 +358,32 @@ export const pageQuery = graphql`
               src
               srcSet
               srcWebp
+            }
+          }
+        }
+      }
+    }
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }, limit: 11
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 400)
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            templateKey
+            date(formatString: "MMMM DD, YYYY")
+            featuredimage {
+              childImageSharp {
+                fluid(maxWidth: 600, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
         }
