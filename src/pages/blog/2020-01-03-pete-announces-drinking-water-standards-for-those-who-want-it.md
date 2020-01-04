@@ -13,6 +13,4 @@ tags:
 ---
 Following Bernie Sanders' plan to establish federal standards for drinking water, Mayor Pete has rolled out  "Drinking Water Standards For Those Who Want It".
 
-
-
-Mayor Pete points out that "If you like the lead in your water, you can keep it". Pete believes the government should not be taking away the choice to get lead poising.
+Mayor Pete points out that "If you like the lead in your water, you can keep it". Pete believes the government should not be taking away the choice to get lead poisoning.
