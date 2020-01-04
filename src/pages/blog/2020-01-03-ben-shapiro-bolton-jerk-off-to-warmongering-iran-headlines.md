@@ -10,4 +10,4 @@ featuredimage: /img/dsf.jpg
 tags:
   - john bolton
 ---
-Ben Shapiro and John Bolton were seen jerking off together as they read the warmongering headlines in the media all day.
+Ben Shapiro and John Bolton were seen jerking off together as they learned that millions of innocent brown people will die as a result of a war with Iran.
