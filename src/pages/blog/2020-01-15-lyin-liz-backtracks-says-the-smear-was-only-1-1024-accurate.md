@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: 'Lyin Liz backtracks, says the smear was only 1/1024 accurate '
+title: 'Lyin Liz claims the smear was only 1/1024 accurate '
 description: >-
   Republican candidate, Elizabeth Warren has confirmed her Bernie smear was only
   1/1024 accurate. 
