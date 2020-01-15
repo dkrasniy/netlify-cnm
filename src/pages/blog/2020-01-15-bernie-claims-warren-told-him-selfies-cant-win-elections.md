@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: 'Bernie claims Warren told him Selfies can''t win elections '
+title: 'Anonymous sources claim Warren told him Selfies can''t win elections '
 description: >-
   Anonymous sources have confirmed that in a private meeting between Warren &
   Bernie, Warren told Bernie that Selfies could never win elections. 
