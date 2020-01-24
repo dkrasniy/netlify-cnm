@@ -194,7 +194,7 @@ style={{'background':'#1DA1F2'}}
                 <>
                   <div className={`block w-full md:w-1/2`} key={post.id}>
                     <div className="my-2 md:px-2">
-                      <div className="bg-white">
+                      <div className="bg-gray-100">
                         <Link className="flex flex-wrap" to={post.fields.slug + `?section=recent&originid=${id}&originslug=${slug}`}>
                           <div className="img w-1/3 md:w-full">
                             {post.frontmatter.featuredimage ? (
