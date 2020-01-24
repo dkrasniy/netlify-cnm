@@ -40,3 +40,6 @@
   ol, ul {
     list-style: decimal;
 }
+.lora-font {
+  font-family: 'Lora', serif;
+}

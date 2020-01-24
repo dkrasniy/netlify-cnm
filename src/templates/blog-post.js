@@ -98,7 +98,7 @@ const BlogPostTemplate = ({
     authorLabel = 'CNM'
   }
   return (
-    <article itemScope itemType="http://schema.org/Article">
+    <article itemScope itemType="http://schema.org/Article" className="laora-font">
       <div className="bg-white p-6 py-8 md:p-12 pb-32 md:pb-40">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto">
@@ -139,7 +139,7 @@ const BlogPostTemplate = ({
           ) : null}
         </div>
       </div>
-      <div className="max-w-3xl leading-relaxed mx-auto py-4 p-6 md:px-0">
+      <div className="max-w-3xl leading-relaxed mx-auto py-4 p-6 md:px-0 laora-font">
         <PostContent content={content} />
         {tags && tags.length ? (
           <div style={{ marginTop: `2rem` }}>
