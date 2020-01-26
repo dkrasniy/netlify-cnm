@@ -32,8 +32,8 @@ const RussianAssetCheck = ({ data }) => {
   }, 1200);
   };
 
-  const CheckMark = () => (<div className="flex items-center border-b mb-2 pb-2 border-gray-200"><div className="bg-red-500 p-1 inline-block text-white rounded-full mr-2"><Check strokeWidth={4}/></div><span className="block text-2xl lg:text-2xl font-semibold">{name}, you're a Russian Asset</span><img className="w-12 ml-auto shadow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/1599px-Flag_of_Russia.svg.png"/></div>)
-  const NoMark = () => (<div className="flex items-center border-b mb-2 pb-2 border-gray-200"><div className="bg-green-500 p-1 inline-block text-white rounded-full mr-2"><X strokeWidth={4}/></div><span className="block text-2xl lg:text-2xl font-semibold">Not a Russian Asset</span><img className="w-12 ml-auto shadow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Logo_of_Hillary_Clinton_campaign_2016_%28blue_and_red%29.svg/600px-Logo_of_Hillary_Clinton_campaign_2016_%28blue_and_red%29.svg.png"/></div>)
+  const CheckMark = () => (<div className="flex items-center border-b mb-2 pb-2 border-gray-200"><div className="bg-red-500 p-1 inline-block text-white rounded-full mr-2"><X strokeWidth={4}/></div><span className="block text-2xl lg:text-2xl font-semibold">{name}, you're a Russian Asset</span><img className="w-12 ml-auto shadow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/1599px-Flag_of_Russia.svg.png"/></div>)
+  const NoMark = () => (<div className="flex items-center border-b mb-2 pb-2 border-gray-200"><div className="bg-green-500 p-1 inline-block text-white rounded-full mr-2"><Check strokeWidth={4}/></div><span className="block text-2xl lg:text-2xl font-semibold">Not a Russian Asset</span><img className="w-12 ml-auto shadow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Logo_of_Hillary_Clinton_campaign_2016_%28blue_and_red%29.svg/600px-Logo_of_Hillary_Clinton_campaign_2016_%28blue_and_red%29.svg.png"/></div>)
 
 const YesAssetResults = () => {
 
@@ -90,17 +90,20 @@ return (<Layout>
               {
                 property: "og:image",
                 content:
+                "https://cnmnews.org" +
                 data.fileName.childImageSharp.fixed.src
               },
               {
                 property: "twitter:image",
                 content:
+                "https://cnmnews.org" +
                 data.fileName.childImageSharp.fixed.src
               },
 
               {
                 property: "og:image:url",
                 content:
+                "https://cnmnews.org" +
                 data.fileName.childImageSharp.fixed.src
               },
               {
