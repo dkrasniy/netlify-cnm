@@ -184,7 +184,7 @@ export default RussianAssetCheck;
 
 export const imageQuery = graphql`
 query AssetImage{
-  fileName: file(relativePath: { eq: "images/racheck.jpg" }) {
+  fileName: file(relativePath: { eq: "images/racheck.png" }) {
     childImageSharp {
       fixed(width: 800, height: 420, quality: 80) {
         width
