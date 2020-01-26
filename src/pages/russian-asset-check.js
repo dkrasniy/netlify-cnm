@@ -170,7 +170,7 @@ return (<Layout>
             />
           </div>
           <div className="py-4">
-            <input className={`bg-transition focus:outline-none p-3 w-full rounded-full  font-semibold ${antiCorruptionOptionSelected == '' && name == '' ? 'bg-gray-200 text-gray-500' :'bg-gray-900 text-white cursor-pointer'}`} type="submit" value={validatingRunning ? 'Asking Hillary now...' : "Run Check"} disabled={antiCorruptionOptionSelected == '' && name == ''}  />
+            <input className={`bg-transition focus:outline-none p-3 w-full rounded-full  font-semibold ${antiCorruptionOptionSelected == '' || name == '' ? 'bg-gray-200 text-gray-500' :'bg-gray-900 text-white cursor-pointer'}`} type="submit" value={validatingRunning ? 'Asking Hillary now...' : "Run Check"} disabled={antiCorruptionOptionSelected == '' || name == ''}  />
                </div>
         </form>
       </div></>}
