@@ -43,3 +43,6 @@
 .lora-font {
   font-family: 'Lora', serif;
 }
+.bg-transition {
+  transition: .2s ease background;
+}
