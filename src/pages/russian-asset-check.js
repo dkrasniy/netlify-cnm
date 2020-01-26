@@ -24,13 +24,14 @@ const RussianAssetCheck = ({ data }) => {
   navigate(`russian-asset-check/?${name.replace(/ /g,"-")}`)
   
    setTimeout(function() {
-    window.scrollTo(0,0);
+  
     if(antiCorruptionOptionSelected == 'true'){
       setIsRussianAsset(true)
     } else {
       setIsRussianAsset(false)
     }
     setShowResults(true)
+    window.scrollTo(0,0);
     setValidatingRunning(false)
   }, 1800);
   };
@@ -39,18 +40,19 @@ const RussianAssetCheck = ({ data }) => {
   const NoMark = () => (<div className="flex items-center border-b mb-2 pb-2 border-gray-200"><div className="bg-green-500 p-1 inline-block text-white rounded-full mr-2"><Check strokeWidth={4}/></div><span className="block text-2xl lg:text-2xl font-semibold">Not a Russian Asset</span><img className="w-12 ml-auto shadow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Logo_of_Hillary_Clinton_campaign_2016_%28blue_and_red%29.svg/600px-Logo_of_Hillary_Clinton_campaign_2016_%28blue_and_red%29.svg.png"/></div>)
 
 const YesAssetResults = () => {
-
-  switch(Math.floor(Math.random() * 3)) {
+let randNumb = Math.floor(Math.random() * 4);
+console.log(randNumb)
+  switch(randNumb) {
     case 0:
       return (<><CheckMark/><h1 className="text-xl lg:text-2xl text-center py-6 text-gray-700">{name}, there’s a pretty great chance you are buddies with Vlad Putin! Your similarities are too striking!</h1></>)
       break;
     case 1:
-      return (<><CheckMark/><h1 className="text-xl lg:text-2xl text-center py-6 text-gray-700">Woah there {name}, nothing says Kremlin asset more than your lack of support for corruption in the democratic party!</h1></>)
+      return (<><CheckMark/><h1 className="text-xl lg:text-2xl text-center py-6 text-gray-700">Privet {name}, nothing says Kremlin asset more than your lack of support for corruption in the democratic party!</h1></>)
       break;
     case 2:
       return (<><CheckMark/><h1 className="text-xl lg:text-2xl text-center py-6 text-gray-700">{name}, nothing shows you are being controlled by Putin more than being against the corrupt DC establishment!</h1></>)
       break;
-      default:
+    default:
       return (<><CheckMark/><h1 className="text-xl lg:text-2xl text-center py-6 text-gray-700">Anti-corruption, {name}? You aren't even trying to mask your support for Vladimir Putin and it really shows.</h1></>)
      }
 
