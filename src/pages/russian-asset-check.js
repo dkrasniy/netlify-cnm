@@ -5,6 +5,8 @@ import {  Check, X } from "react-feather";
 import { Link, graphql,navigate } from "gatsby";
 import Helmet from "react-helmet";
 
+
+
 const RussianAssetCheck = ({ data }) => {
 
   const [name, setName] = useState('');
@@ -19,7 +21,8 @@ const RussianAssetCheck = ({ data }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
   setValidatingRunning(true)
-
+  navigate(`russian-asset-check/?${name.replace(/ /g,"-")}`)
+  
    setTimeout(function() {
     window.scrollTo(0,0);
     if(antiCorruptionOptionSelected == 'true'){
