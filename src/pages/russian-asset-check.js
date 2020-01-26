@@ -40,7 +40,7 @@ const RussianAssetCheck = ({ data }) => {
 
 const YesAssetResults = () => {
 
-  switch(Math.floor(Math.random() * 2)) {
+  switch(Math.floor(Math.random() * 3)) {
     case 0:
       return (<><CheckMark/><h1 className="text-xl lg:text-2xl text-center py-6 text-gray-700">{name}, there’s a pretty great chance you are buddies with Vlad Putin! Your similarities are too striking!</h1></>)
       break;
