@@ -7,6 +7,7 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import Img from "gatsby-image";
 import BlogRoll from "../components/BlogRoll";
+import {  HelpCircle } from "react-feather";
 
 import {
   FacebookShareButton,
@@ -183,6 +184,9 @@ style={{'background':'#1DA1F2'}}
 </div>
       </div>
 <div className="container mx-auto max-w-3xl">
+<div className="p-2 w-full mb-6">
+      <Link to="/russian-asset-check" className="block shadow bg-red-500 rounded p-3 text-white font-semibold hover:shadow-lg cursor-pointer flex items-center"><HelpCircle className="bg-red-500 text-white rounded-full mr-2"/>Are You a Russian Asset? Find Out Now</Link>
+      </div>
 <span className="block font-semibold text-center text-lg pb-2">Recent Stories</span>
 
       <div className="flex flex-wrap">

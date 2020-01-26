@@ -32,7 +32,7 @@ const RussianAssetCheck = ({ data }) => {
     }
     setShowResults(true)
     setValidatingRunning(false)
-  }, 1200);
+  }, 1800);
   };
 
   const CheckMark = () => (<div className="flex items-center border-b mb-2 pb-2 border-gray-200"><div className="bg-red-500 p-1 inline-block text-white rounded-full mr-2"><X strokeWidth={4}/></div><span className="block text-2xl lg:text-2xl font-semibold">{name}, you're a Russian Asset</span><img className="w-12 ml-auto shadow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/1599px-Flag_of_Russia.svg.png"/></div>)
@@ -123,10 +123,10 @@ return (<Layout>
               }
             ]}
           />
-{showResults ?   <div className="max-w-xl mx-auto p-6 md:p-12 py-12">
+{showResults ?   <div className="max-w-xl mx-auto p-6 md:p-12 py-12 bg-white">
         {isRussianAsset ? <YesAssetResults/>:<NoAssetResults/>}
         <button type="button" onClick={()=>{setIsRussianAsset(null); setShowResults(false); setAntiCorruptionOptionSelected('')}} className="mt-4 bg-gray-200 hover:bg-gray-300 bg-transition focus:outline-none p-3 w-full rounded-full cursor-pointer font-semibold">Run another test</button>
-      </div>  : <> <div className="max-w-xl mx-auto p-6 md:p-12 py-12">
+      </div>  : <> <div className="max-w-xl mx-auto p-6 md:p-12 py-12 bg-white">
         <h1 className="text-3xl lg:text-4xl font-semibold">
           Are you a russian asset?
         </h1>

@@ -4,14 +4,20 @@ import { Link, graphql, StaticQuery } from "gatsby";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import Layout from "../components/Layout";
 import Img from "gatsby-image";
+import {  HelpCircle } from "react-feather";
 
 const IndexPage = ({ data }) => {
   const { edges: posts } = data.allMarkdownRemark;
 
   return (
     <Layout>
+      
       <div className="bg-gray-200">
+    
         <div className="flex flex-wrap container mx-auto">
+        <div className="p-3 w-full">
+      <Link to="/russian-asset-check" className="block shadow bg-white rounded p-3 text-red-500 font-semibold hover:shadow-lg cursor-pointer flex items-center"><HelpCircle className="bg-red-500 text-white rounded-full mr-2"/>Are You a Russian Asset? Find Out Now</Link>
+      </div>
           {posts.slice(0, 1).map(({ node: post }, key) => (
             <>
               <Link className="flex flex-wrap w-full" to={post.fields.slug}>
