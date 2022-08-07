@@ -50,9 +50,6 @@ const TemplateWrapper = ({ children,location }) => {
           content={`${withPrefix("/")}img/og-image.jpg`}
         />
       </Helmet>
-      <div className="bg-red-100 text-center p-3 py-6">
-        <span className="font-semibold block text-red-600 flex items-center justify-center"><AlertTriangle className="p-1"/>Suspended on Twitter</span>
-        <span className="text-gray-800">Twitter has suspended our account despite not breaking any Twitter Rules and clearly being marked a parody. Please support us by tweeting <a className="font-semibold text-black" href="https://twitter.com/TwitterSupport">@TwitterSupport</a> and follow my personal account <a className="font-semibold text-black" href="https://twitter.com/Berniewouldawon">@Berniewouldawon</a></span></div>
       <Navbar />
   {children}
       <Footer />
